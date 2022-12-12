@@ -1,0 +1,79 @@
+const array1 = [1, 2, 3, 4];
+reducer=(previousvalue,curreValue,currentIndex,array)=>{
+
+   console.log(`previous: ${previousvalue}, current: ${curreValue}, index: ${currentIndex}, returns: ${previousvalue+curreValue}`);
+   
+  return previousvalue+curreValue;
+  
+}
+
+console.log(array1.reduce(reducer,10));
+
+
+let names = [1,2,3,4,5,6,7,1,1]
+
+let countedNames = names.reduce(function (allNames, name) {
+console.log(allNames,'allNames'); 
+console.log(name,'name'); 
+  if (name in allNames) {
+    allNames[name]++
+  }
+  else {
+    allNames[name] = 1
+  }
+  return allNames
+}, {})
+console.log(countedNames); 
+
+
+//how to remove spaces from a string
+
+let str = "hello welcome kiran";
+
+const arr = str.split(" ");
+console.log('arr', arr);
+const newstr = arr.join("");
+console.log('newstr', newstr);
+
+//how to capitalize first letter of a string
+
+let str = "i have learnt somethong today";
+
+const result = str.charAt(0).toUpperCase() + str.slice(1);
+console.log('result', result)
+
+//how to capitalize first letter of a each strings
+
+let str = "i have learnt somethong today";
+
+const arr = str.split(" ");
+var result;
+console.log('arr', arr)
+for (var i=0; i<arr.length;i++){
+	 arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
+  
+}
+console.log('result', arr)
+const str2 = arr.join(" ");
+console.log(str2);
+
+n this example the trim() method removes all the leading and the trailing spaces in the string str.
+
+Example 2:  
+
+var str = "   GeeksforGeeks";
+var st = str.trim();
+print(st);
+
+//remove duplicate characters
+const unrepeated = (str) => [...new Set(str)];
+console.log('unrepeated',  [...new Set("hello")].join(''));
+
+console.log(unrepeated("hello")); //➞ "helo"
+unrepeated("aaaaabbbbbb"); //➞ "ab"
+unrepeated("11112222223333!!!??"); //➞ "123!?"
+
+///////////set
+
+Sets are a new object type with ES6 (ES2015) that allow creating collections of unique values. 
+The values in a set can be either simple primitives like strings or integers as well as more complex object types like object literals or arrays.
